@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" integrity="sha384-UkhoMnFYayEE1K9IZZJz7VgH1tDRvoKrKc8wEwgi7TSAOsLr3+yhW8/zKjBpR1G/" crossorigin="anonymous">
+
+    <title>{{ group_name }} Details</title>
+  </head>
+  <body>
+    <div class="container my-4">
+      <h1>{{ group_name }}</h1>
+      <p>Admin: {{ group_admin_name }} ({{ group_admin_phone }})</p>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Phone Number</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for member in group_members %}
+          <tr>
+            <td>{{ member.name }}</td>
+            <td>{{ member.phone }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <p>Total Members (excluding admins): {{ total_members }}</p>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha384-/1X1rR12a0CgDrXD6Q6EdX8OvZTgmsKpJO6Lvu+aLW8dhYUVIytHz1T3vc2woHp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-j/yWgkoQPhMClO9IaWOynN4PFKW4FvN7VVKadw52uI5pimW5b5r5hXyl5di1z8U6" crossorigin="anonymous"></script>
+  </body>
+</html>

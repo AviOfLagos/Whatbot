@@ -1,0 +1,8 @@
+Flask==2.1.1
+google-auth==1.35.0
+google-auth-oauthlib==0.4.5
+google-auth-httplib2
+google-api-python-client==2.21.0
+twilio==6.63.0
+loguru==0.5.3
+oauth2client
